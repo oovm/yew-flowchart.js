@@ -1,0 +1,14 @@
+{
+    "private": true,
+    "scripts": {
+        "build": "node esbuild",
+        "test": "wee build && wasm-pack test --node"
+    },
+    "dependencies": {
+        "flowchart.js": "^1.15.0",
+        "raphael": "^2.3.0"
+    },
+    "devDependencies": {
+        "esbuild": "^0.7.17"
+    }
+}

@@ -1,0 +1,13 @@
+[workspace]
+members = ["projects/*"]
+default-members = [
+    "projects/wasmbind-flowchartjs",
+    "projects/yew-flowchartjs",
+    "projects/yew-flowchartjs-preview",
+]
+exclude = [
+    "projects/.DS_Store",
+]
+
+[profile.release]
+lto = true
