@@ -40,9 +40,10 @@ const opts: FlowChart.DrawOptions = {
     }
 };
 
-export function draw_flow_chart(code: string) {
+export function draw_flow_chart(html: HTMLElement, code: string) {
     let chart = FlowChart.parse(code);
-    return chart.drawSVG('canvas', opts)
+    //return chart.drawSVG(html, opts)
+    return chart.drawSVG(html)
 }
 
 

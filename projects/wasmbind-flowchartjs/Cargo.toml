@@ -14,6 +14,10 @@ include = ["/src/**/*"]
 # serde = "1.0"
 # serde_derive = "1.0"
 
+[dependencies.web-sys]
+version = "0.3"
+features = ["Element"]
+
 [dependencies.wasm-bindgen]
 version = "0.2"
 # features = ["serde-serialize"]

@@ -1,6 +1,6 @@
 {
     "private": true,
     "scripts": {
-        "web": "cd projects/yew-flowchartjs-preview && trunk serve"
+        "web": "cd projects/yew-flowchartjs-preview && wee dev"
     }
 }

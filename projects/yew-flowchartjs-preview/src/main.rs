@@ -10,11 +10,11 @@ use yew::{
 use yew_flowchartjs::FlowChartJS;
 
 pub fn header_view() -> Html {
-    let title = "KaTeX for Yew";
+    let title = "Flowchart.js for Yew";
     html! {
     <header>
         <h1 color="#009688">{title}</h1>
-        <a href="https://github.com/GalAster/yew-flowchartjs">{"Fork me!"}</a>
+        <a href="https://github.com/GalAster/yew-flowchart.js">{"Fork me!"}</a>
     </header>
     }
 }
@@ -39,7 +39,7 @@ impl Component for Model {
             match storage.restore("flow chart") {
                 Json(Ok(restored_model)) => restored_model,
                 _ => {
-                    String::from(r#"\int_{\partial M}^{}\omega＝\int_{M}^{}\mathrm{d}\,\omega"#)
+                    String::from(include_str!("readme.md"))
                 }
             }
         };

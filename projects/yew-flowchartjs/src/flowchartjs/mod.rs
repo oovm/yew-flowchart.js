@@ -33,8 +33,8 @@ impl Component for FlowChartJS {
     }
 
     fn view(&self) -> Html {
-        let t = yew::utils::document().create_element("span").unwrap();
-        t.set_inner_html(&draw_flow_chart(&self.props.code));
-        Html::VRef(t.into())
+        let t = yew::utils::document().create_element("div").unwrap();
+        &draw_flow_chart(&t, &self.props.code);
+        Html::VRef(t.first_child().unwrap().into())
     }
 }

@@ -1,28 +1,31 @@
-flowchart.js for Yew
+Flowchart.js for Yew
 ====================
 
-Render math with KaTeX in Yew!
+Render flow chart with Flowchart.js in Yew!
 
-- The online preview: https://galaster.github.io/yew-katex
+- The online preview: https://galaster.github.io/yew-flowchart.js
 
 ## How to use
 
-1. It's only do the wasm bind, so load cdn first
+1. No CDN needed
 
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-```
-
-2. Easily used by `<KaTeX/>`
+2. Easily used by `<FlowChartJS/>`
 
 ```rust
-use yew_katex::KaTeX;
+use yew_flowchartjs::FlowChartJS;
 
 html! {
-    <KaTeX math="\\KaTeX" inline=false/>
+    <FlowChartJS code=&self.input/>
 }
 ```
 
 ## Todo
 
-- [ ] Automatically import css cdn when the first component is loaded
+- [ ] Chrome only:
+
+```js
+Error: <tspan> attribute dy: Expected length, "NaN".
+```
+
+Fix: https://github.com/DmitryBaranovskiy/raphael/issues/593
+

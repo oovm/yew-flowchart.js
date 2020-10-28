@@ -6,8 +6,3 @@ use wasm_bindgen_test::*;
 fn run() {
     println!("it works!")
 }
-
-#[wasm_bindgen_test]
-fn mode() {
-    assert_ne!(d.render("\\frac12"), i.render("\\frac12"));
-}
